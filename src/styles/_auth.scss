@@ -2,6 +2,11 @@
 
   &__list {
     margin: 10px 0;
+
+    @media screen and (max-width: $nav-break-point) {
+      margin: 25px 0;
+      padding: 0;
+    }
   }
 
   &__item {
@@ -15,6 +20,11 @@
     &-active {
       @include button;
       padding: 8px 30px;
+      transition: $transition-duration;
+    }
+
+    &-active:hover {
+      @include button-hover;
     }
   }
 }
